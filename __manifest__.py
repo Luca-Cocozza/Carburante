@@ -1,6 +1,6 @@
 {
     'name': 'carburante',
-    'version': '16',
+    'version': '17.0',
     'author': "Luca Cocozza",
     'application': True,
     'description': "Gestione dei rifornimenti relativi alla flotta aziendale.",
@@ -12,6 +12,7 @@
         'view/fleet_fuel_view.xml',
         'view/fleet_fuel_type_view.xml',
         'view/fleet_fuel_company_view.xml',
+        'view/fleet_vehicle_update_view.xml',
         # Menu
         'view/menu.xml',
     ],
