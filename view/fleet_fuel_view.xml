@@ -29,7 +29,7 @@
                 <field name="invoice_date" optional="hide"/>
                 <field name="invoice_discount" optional="hide"/>
                 <field name="tax_rate" optional="hide"/>
-                <field name="price_whitout_tax" optional="hide"/>
+                <field name="price_without_tax" optional="hide"/>
             </tree>
         </field>
     </record>
@@ -40,6 +40,9 @@
         <field name="model">fleet.fuel</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <field name="state"  widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="name" invisible="1"/>
@@ -69,9 +72,14 @@
                         <field name="invoice_date"/>
                         <field name="invoice_discount"/>
                         <field name="tax_rate"/>
-                        <field name="price_whitout_tax"/>
+                        <field name="price_without_tax"/>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
@@ -102,7 +110,7 @@
                 <field name="invoice_date"/>
                 <field name="invoice_discount"/>
                 <field name="tax_rate"/>
-                <field name="price_whitout_tax"/>
+                <field name="price_without_tax"/>
             </search>
         </field>
     </record>
@@ -113,6 +121,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    
-    
+
+
 </odoo>
